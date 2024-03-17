@@ -1,0 +1,70 @@
+#include <stdio.h>
+
+int main() {
+    int pilihan;
+    long int angka, sisa, biner = 0, basis = 1;
+    long int oktal = 0, basis_oktal = 1;
+    
+    printf("Menu:\n");
+    printf("1. Desimal ke Biner\n");
+    printf("2. Biner ke Desimal\n");
+    printf("3. Desimal ke Oktal\n");
+    printf("4. Oktal ke Desimal\n");
+    printf("Masukkan pilihan Anda: ");
+    scanf("%d", &pilihan);
+
+    switch(pilihan) {
+        case 1:
+            printf("Masukkan angka desimal: ");
+            scanf("%ld", &angka);
+            long int desimal = angka;
+            while (desimal > 0) {
+                sisa = desimal % 2;
+                biner += sisa * basis;
+                desimal /= 2;
+                basis *= 10;
+            }
+            printf("Nilai biner: %ld\n", biner);
+            break;
+        case 2:
+            printf("Masukkan angka biner: ");
+            scanf("%ld", &angka);
+            while (angka > 0) {
+                sisa = angka % 10;
+                biner += sisa * basis;
+                angka /= 10;
+                basis *= 2;
+            }
+            printf("Nilai desimal: %ld\n", biner);
+            break;
+        case 3:
+            printf("Masukkan angka desimal: ");
+            scanf("%ld", &angka);
+            long int nominal = angka;
+            while (nominal > 0) {
+                sisa = nominal % 8;
+                oktal += sisa * basis_oktal;
+                nominal /= 8;
+                basis_oktal *= 10;
+            }
+            printf("Nilai oktal: %ld\n", oktal);
+            break;
+        case 4:
+            printf("Masukkan angka oktal: ");
+            scanf("%lo", &angka);
+            desimal = 0 , basis_oktal= 1;
+
+            while (angka > 0) {
+                sisa = angka % 10;
+                oktal += sisa * basis_oktal;
+                angka /= 10;
+                basis_oktal *= 8;
+            }
+            printf("Nilai desimal: %lo\n", oktal);
+            break;
+        default:
+            printf("Pilihan tidak valid\n");
+    }
+
+    return 0;
+}
