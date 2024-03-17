@@ -1,0 +1,52 @@
+ #include <stdio.h>
+
+int main() {
+  char input[10];
+  int tahun;
+
+  while (1) {
+        // Meminta pengguna untuk memasukkan tahun
+        printf("Masukkan tahun (4 digit): ");
+        scanf("%s", input );
+
+        // Memeriksa panjang input
+        int inputan = 0;
+        while (input[inputan] != '\0') {
+            inputan++;
+        }
+        if (inputan != 4) {
+            printf("Masukan harus terdiri dari 4 digit.\n");
+            continue;
+        }
+
+        // Memeriksa apakah masukan berupa bilangan
+        int bilangan = 1;
+        for (int i = 0; i < 4; i++) {
+            if (input[i] < '0' || input [i] > '9') {
+                bilangan = 0;
+                break;
+            }
+        }
+        if (!bilangan) {
+            printf("Masukan harus berupa bilangan.\n");
+            continue;
+        }
+
+        // Mengonversi masukan ke dalam bentuk integer
+        tahun = 0;
+        for (int i = 0; i < 4; i++) {
+            tahun = tahun * 10 + (input [i] - '0');
+        }
+
+        // Memeriksa apakah tahun kabisat atau bukan
+        if ((tahun % 4 == 0 && tahun % 100 != 0) || tahun % 400 == 0) {
+            printf("%d adalah tahun kabisat.\n", tahun);
+        } else {
+            printf("%d bukan tahun kabisat.\n", tahun);
+        }
+
+        break;
+    }
+
+    return 0;
+}
