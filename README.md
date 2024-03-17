@@ -96,7 +96,7 @@ case 1:
             printf("Nilai biner: %ld\n", biner);
             break;
 
-apabila inputan yang dimasukkan adalah 1, maka akan termasuk pada halaman case 1, dan akan menginput "masukkan angka desimal", long int desimal = angka;: Variabel desimal diinisialisasi dengan nilai yang dimasukkan oleh pengguna. while (desimal > 0) { ... }: Ini adalah loop while yang akan terus berjalan selama desimal lebih besar dari 0. Di dalam loop, sisa = desimal % 2; digunakan untuk menghitung sisa pembagian desimal dengan 2, yang merupakan bit biner yang akan ditambahkan ke representasi biner.biner += sisa * basis;: Ini adalah langkah untuk mengakumulasikan nilai biner. sisa dikalikan dengan basis dan ditambahkan ke biner. desimal /= 2;: Ini adalah langkah untuk membagi desimal dengan 2, karena kita sedang mengonversi ke biner. basis *= 10;: basis digunakan untuk menggeser digit biner ke kiri dengan mengalikannya dengan 10. printf("Nilai biner: %ld\n", biner);: Setelah loop selesai, program mencetak nilai biner yang dihasilkan. break;: Ini adalah pernyataan break yang menghentikan eksekusi dari switch case setelah case 1 selesai dieksekusi.
+apabila inputan yang dimasukkan adalah 1, maka akan termasuk pada halaman case 1, dan akan menginput "masukkan angka desimal", long int desimal = angka; adalah Variabel desimal.  "while (desimal > 0) { ... }": adalah suatu yang akan terus berjalan selama desimal lebih besar dari 0. Di dalam loop, sisa = desimal % 2; digunakan untuk menghitung sisa pembagian desimal dengan 2, yang merupakan bit biner yang akan ditambahkan ke representasi biner. biner += sisa * basis;: Ini adalah langkah untuk mengakumulasikan nilai biner. sisa dikalikan dengan basis dan ditambahkan ke biner. desimal /= 2;: Ini adalah langkah untuk membagi desimal dengan 2, karena kita sedang mengonversi ke biner. basis *= 10;: basis digunakan untuk menggeser digit biner ke kiri dengan mengalikannya dengan 10. printf("Nilai biner: %ld\n", biner);: Setelah loop selesai, program mencetak nilai biner yang dihasilkan. break;: Ini adalah pernyataan break yang menghentikan eksekusi dari switch case setelah case 1 selesai dieksekusi.
 
 case 2:
             printf("Masukkan angka biner: ");
@@ -207,12 +207,12 @@ int main() {
 
     return 0;
 }
-Program meminta pengguna untuk memasukkan tahun (4 digit).
-Program memeriksa panjang input yang dimasukkan pengguna. Jika input tidak terdiri dari 4 digit, program akan mencetak pesan kesalahan dan meminta pengguna untuk memasukkan kembali.
-Program memeriksa apakah input yang dimasukkan pengguna terdiri dari bilangan. Jika input tidak berupa bilangan, program akan mencetak pesan kesalahan dan meminta pengguna untuk memasukkan kembali.
-Program mengonversi input yang dimasukkan pengguna ke dalam bentuk integer.
-Program memeriksa apakah tahun yang dimasukkan pengguna merupakan tahun kabisat atau bukan dengan mengikuti aturan bahwa tahun kabisat adalah tahun yang habis dibagi 4, kecuali tahun yang habis dibagi 100 tetapi tidak habis dibagi 400.
-Program mencetak hasil, apakah tahun tersebut adalah tahun kabisat atau bukan, ke layar.
+
+Program akan meminta untuk memasukkan tahun dalam 4 digit. kemudian Program akan memeriksa panjang input yang dimasukkan pengguna. Jika input tidak terdiri dari 4 digit baik lebih maupun kurang, program akan mencetak pesan kesalahan dan meminta pengguna untuk memasukkan kembali.
+selain jumlah inputan dalam bentuk bilangan program juga akan memeriksa apakah input yang dimasukkan terdiri dari bilangan. Jika input tidak berupa bilangan, program akan mencetak pesan kesalahan dan meminta pengguna untuk memasukkan kembali.
+ketika inputan sesuai program akan mengonversi inputan.
+kemudian memeriksa apakah tahun yang dimasukkan  merupakan tahun kabisat atau bukan dengan mengikuti aturan bahwa tahun kabisat adalah tahun yang habis dibagi 4, kecuali tahun yang habis dibagi 100 tetapi tidak habis dibagi 400.
+kemudian akan mencetak hasil, apakah tahun tersebut adalah tahun kabisat atau bukan, ke layar.
 Program kemudian berakhir.
 
 
